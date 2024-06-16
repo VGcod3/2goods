@@ -2,32 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.container {
+  @apply w-full p-4 max-w-7xl mx-auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.gradient-bg {
+  background: linear-gradient(45deg, #5e248a 0%, #a43ef0 100%);
+  transition: all 0.5s;
+  color: white;
+
+  &:hover,
+  &:focus-visible {
+    background: #f3f3f3;
+
+    transition: all 0.3s;
+
+    color: #7f30ba;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.gradient-border {
+  background: linear-gradient(45deg, #5e248a 0%, #a43ef0 100%);
+  padding: 4px;
+
+  border-radius: 20px;
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-tr from-land-violet to-land-primary;
+}
+
+.h1-text {
+  @apply text-4xl font-semibold lg:text-6xl lg:font-bold;
+}
+
+.h2-text {
+  @apply text-xl lg:text-3xl font-semibold;
+}
+
+.r1-text {
+  @apply text-xl lg:text-2xl font-light;
+}
+
+.r2-text {
+  @apply text-lg font-light;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }
