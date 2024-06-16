@@ -38,7 +38,12 @@ export const WhyUs = () => {
       <div className="absolute top-0 -z-50 w-full h-5/6 bg-land-violet"></div>
       <BlurredEffects />
 
-      <div className="absolute top-0 left-0 -z-40 w-full h-full backdrop-blur-3xl"></div>
+      <div
+        className="absolute top-0 left-0 -z-40 w-full h-full backdrop-blur-3xl"
+        style={{
+          WebkitBackdropFilter: "blur(64px)",
+        }}
+      ></div>
 
       <div className="w-full mx-auto max-w-4xl">
         <h2 className="h1-text text-white text-center">Why choose us?</h2>

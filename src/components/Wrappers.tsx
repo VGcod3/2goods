@@ -9,7 +9,7 @@ export const ScreenWrapper = ({
   return (
     <div
       className={cn(
-        "w-full min-h-screen flex flex-col gap-20 p-4 items-center justify-center relative overflow-x-clip",
+        "w-full min-h-screen flex flex-col gap-20 p-4 items-center justify-center relative",
         className
       )}
       {...props}
@@ -34,7 +34,12 @@ export const BlurredWrapper = ({
       ></div>
       <BlurredEffects className={className} />
 
-      <div className="absolute top-0 left-0 -z-40 w-full h-full backdrop-blur-3xl"></div>
+      <div
+        className="absolute top-0 left-0 -z-40 w-full h-full backdrop-blur-3xl"
+        style={{
+          WebkitBackdropFilter: "blur(64px)",
+        }}
+      ></div>
       {children}
     </>
   );

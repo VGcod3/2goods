@@ -3,14 +3,13 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 import { ScreenWrapper, BlurredWrapper } from "./Wrappers";
-import Link from "next/link";
 import useSmoothScrollTo from "@/lib/useSmoothScrollTo";
 
 export const Hero = () => {
   const scrollTo = useSmoothScrollTo();
 
   return (
-    <ScreenWrapper>
+    <ScreenWrapper className=" overflow-x-clip">
       <BlurredWrapper>
         <Image
           width="300"

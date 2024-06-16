@@ -16,6 +16,9 @@ export const Offers = () => {
 
       <div
         className="absolute top-0 left-0 -z-40 w-full h-full backdrop-blur-3xl"
+        style={{
+          WebkitBackdropFilter: "blur(64px)",
+        }}
         id="prizes"
       ></div>
       <div className="flex flex-wrap justify-center gap-10 lg:gap-20 w-full container relative bottom-40">

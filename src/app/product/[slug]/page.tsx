@@ -5,6 +5,7 @@ import { TicketNumberPicker } from "@/app/TicketNumberPicker";
 import { ScreenWrapper, BlurredWrapper } from "@/components/Wrappers";
 import { useDataFromSlug, iOffer } from "@/app/products-data";
 import { PhotoSlider } from "@/components/PhotoSlider";
+import Image from "next/image";
 
 const rules = [
   "  Entries only £2.50",
@@ -28,8 +29,22 @@ const GoodSection = ({ product }: { product: iOffer }) => {
   const { title, price, sold, name, image } = product;
 
   return (
-    <ScreenWrapper className="w-full h-full">
+    <ScreenWrapper className="w-full h-full overflow-x-clip">
       <BlurredWrapper className="h-4/6">
+        <Image
+          width="300"
+          height="300"
+          src="/gift.png"
+          alt="gift"
+          className="absolute top-32 -right-24 -rotate-[24deg] blur-sm -z-30"
+        />
+        <Image
+          width="300"
+          height="300"
+          src="/gift.png"
+          alt="gift"
+          className="absolute bottom-[36vw] -left-24 rotate-[24deg] blur-sm -z-30"
+        />
         <div className="lg:grid grid-cols-12 gap-4 w-full container mt-40 hidden">
           <div className="col-span-6 flex flex-col gap-4">
             <PhotoSlider />

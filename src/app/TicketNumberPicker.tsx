@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { CONSTANTS } from "@/store/CartSlice";
 import { iOffer } from "./products-data";
-import { useCart, useCartItem } from "@/lib/useCart";
+import { useCartItem } from "@/lib/useCart";
 
 export const TicketNumberPicker = ({ product }: { product: iOffer }) => {
   const { min, max, step, defaultValue } = CONSTANTS;

@@ -18,50 +18,48 @@ export default function Good() {
   const { items, totalSum } = useCart();
 
   return (
-    <>
-      <ScreenWrapper>
-        <BlurredWrapper>
-          <div className="w-full h-full flex flex-col gap-6 max-w-6xl mx-auto">
-            <h1 className="h1-text text-white text-center lg:text-left mt-32">
-              Basket
-            </h1>
-            <div className="flex flex-col gap-4">
-              {items.length > 0 ? (
-                items.map((co, i) => <BasketItem {...co} key={i} />)
-              ) : (
-                <div className="border-4 px-6 py-36 rounded-3xl gap-6 flex flex-col items-center">
-                  <p className="h2-text text-center text-white">
-                    No items in the basket
-                  </p>
-                  <Link href="/">
-                    <Button
-                      size={"default"}
-                      className="h-16 font-normal h2-text flex gap-2"
-                    >
-                      <ShoppingCartIcon size={28} />
-                      Go to shop
-                    </Button>
-                  </Link>
-                </div>
-              )}
-            </div>
-            <div className="flex flex-col md:flex-row gap-4 justify-between mt-36">
-              <h1 className="h1-text">Total: {totalSum}$</h1>
-
-              {items.length > 0 ? (
-                <Link href="/checkout">
-                  <Button variant={"gradient"}>Proceed to checkout</Button>
+    <ScreenWrapper>
+      <BlurredWrapper>
+        <div className="w-full h-full flex flex-col gap-6 max-w-6xl mx-auto">
+          <h1 className="h1-text text-white text-center lg:text-left mt-32">
+            Basket
+          </h1>
+          <div className="flex flex-col gap-4">
+            {items.length > 0 ? (
+              items.map((co, i) => <BasketItem {...co} key={i} />)
+            ) : (
+              <div className="border-4 px-6 py-36 rounded-3xl gap-6 flex flex-col items-center">
+                <p className="h2-text text-center text-white">
+                  No items in the basket
+                </p>
+                <Link href="/">
+                  <Button
+                    size={"default"}
+                    className="h-16 font-normal h2-text flex gap-2"
+                  >
+                    <ShoppingCartIcon size={28} />
+                    Go to shop
+                  </Button>
                 </Link>
-              ) : (
-                <Button disabled={true} variant={"gradient"}>
-                  Proceed to checkout
-                </Button>
-              )}
-            </div>
+              </div>
+            )}
           </div>
-        </BlurredWrapper>
-      </ScreenWrapper>
-    </>
+          <div className="flex flex-col md:flex-row gap-4 justify-between mt-36">
+            <h1 className="h1-text">Total: {totalSum}$</h1>
+
+            {items.length > 0 ? (
+              <Link href="/checkout">
+                <Button variant={"gradient"}>Proceed to checkout</Button>
+              </Link>
+            ) : (
+              <Button disabled={true} variant={"gradient"}>
+                Proceed to checkout
+              </Button>
+            )}
+          </div>
+        </div>
+      </BlurredWrapper>
+    </ScreenWrapper>
   );
 }
 

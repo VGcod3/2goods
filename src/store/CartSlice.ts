@@ -54,7 +54,7 @@ const cartSlice = createSlice({
       );
 
       if (item) {
-        item.quantity += action.payload.quantity;
+        item.quantity = action.payload.quantity;
       } else {
         state.items.push(action.payload);
       }
