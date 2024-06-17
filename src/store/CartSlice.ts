@@ -2,9 +2,9 @@ import { iOffer } from "@/app/products-data";
 import { createSlice } from "@reduxjs/toolkit";
 
 export const CONSTANTS = {
-  min: 10,
+  min: 1,
   max: 1000,
-  step: 10,
+  step: 1,
   defaultValue: 350,
 };
 
@@ -35,18 +35,18 @@ const cartSlice = createSlice({
         (item) => item.name === action.payload.name
       ) as iOffer;
 
-      item.quantity + 10 > CONSTANTS.max
+      item.quantity + CONSTANTS.step > CONSTANTS.max
         ? CONSTANTS.max
-        : (item.quantity += 10);
+        : (item.quantity += CONSTANTS.step);
     },
     substractTickets(state, action) {
       const item = state.items.find(
         (item) => item.name === action.payload.name
       ) as iOffer;
 
-      item.quantity - 10 < CONSTANTS.min
+      item.quantity - CONSTANTS.step < CONSTANTS.min
         ? CONSTANTS.min
-        : (item.quantity -= 10);
+        : (item.quantity -= CONSTANTS.step);
     },
     addToStore(state, action) {
       const item = state.items.find(

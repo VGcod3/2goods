@@ -51,24 +51,24 @@ export const useCart = () => {
   const items = useSelector((state) => state.cart.items);
 
   const totalSum = items
-    ? +items
-        .reduce((prev, curr) => {
+    ? toFixedFloat(
+        items.reduce((prev, curr) => {
           return prev + curr.price * curr.quantity;
         }, 0)
-        .toFixed(2)
+      )
     : 0;
 
   const discontedValue = useSelector(
     (state) => state.cart.discount.discountValue
   );
 
-  const discontedMoney = totalSum * (discontedValue / 100);
+  const discontedMoney = toFixedFloat(totalSum * (discontedValue / 100));
 
-  const discontedSum = totalSum - discontedMoney;
+  const discontedSum = toFixedFloat(totalSum - discontedMoney);
 
-  const taxes = +(discontedSum * 0.2).toFixed(2);
+  const taxes = toFixedFloat(discontedSum * 0.2);
 
-  const finalSum = discontedSum + taxes;
+  const finalSum = toFixedFloat(discontedSum + taxes);
 
   return {
     items,
@@ -79,3 +79,5 @@ export const useCart = () => {
     discontedMoney,
   };
 };
+
+const toFixedFloat = (num: number) => +num.toFixed(2);

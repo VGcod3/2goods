@@ -9,7 +9,7 @@ export const Hero = () => {
   const scrollTo = useSmoothScrollTo();
 
   return (
-    <ScreenWrapper className=" overflow-x-clip">
+    <ScreenWrapper className="overflow-x-clip">
       <BlurredWrapper>
         <Image
           width="300"

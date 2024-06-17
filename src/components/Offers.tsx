@@ -10,7 +10,7 @@ export const Offers = () => {
   return (
     <ScreenWrapper className="h-full min-h-min" id="prizes">
       <div className="absolute bottom-0 -z-50 w-full h-4/6 bg-land-violet"></div>
-      <div className="absolute top-1/4">
+      <div className="absolute top-1/4 overflow-x-clip">
         <BlurredEffects />
       </div>
 
