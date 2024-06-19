@@ -9,10 +9,10 @@ import Image from "next/image";
 import dayjs from "dayjs";
 
 const rules = [
-  "  Entries only £2.50",
+  "Entries only $4.99",
   "Max entries 319,999",
   "Max 1000 per person",
-  "Total value £500,245.23",
+  "Total value $500,245.23",
   "Total prizes 3001",
 ];
 

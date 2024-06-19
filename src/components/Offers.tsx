@@ -45,7 +45,7 @@ const Offer = ({ image, title, price, sold, href }: iOffer) => {
         <h3 className="text-2xl font-semibold text-land-gray">{title}</h3>
 
         <Badge className="w-24 lg:w-36 h-10 lg:h-12 h2-text justify-center ">
-          £{price}
+          ${price}
         </Badge>
         <div className="relative bottom-6 flex flex-col gap-0.5">
           <p className="r2-text text-right text-land-violet">Sold {sold}%</p>
