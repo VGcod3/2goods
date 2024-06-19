@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { cn } from "@/lib/utils";
 import { Footer } from "../components/Footer";
 import { Providers } from "@/store/Providers";
+import { MarqueBottom } from "@/components/MarqueeBottom";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -25,11 +26,17 @@ export default function RootLayout({
     <Providers>
       <html lang="en">
         <body className={cn(archivo.className, "flex flex-col bg-white")}>
-          <Header />
+          <div className="mb-16">
+            <Header />
 
-          {children}
+            {children}
 
-          <Footer />
+            <Footer />
+          </div>
+
+          <div className="fixed w-full bottom-0">
+            <MarqueBottom />
+          </div>
         </body>
       </html>
     </Providers>

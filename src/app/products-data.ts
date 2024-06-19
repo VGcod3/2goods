@@ -8,6 +8,7 @@ export interface iOffer {
   price: number;
   sold: number;
   quantity: number;
+  sliderPhoto: string[];
 }
 
 export const offers: iOffer[] = [
@@ -19,6 +20,7 @@ export const offers: iOffer[] = [
     price: 4.99,
     sold: 72,
     quantity: 0,
+    sliderPhoto: ["/dyson1.jpg", "/dyson3.jpg", "/dyson2.png"],
   },
   {
     name: "makita",
@@ -28,6 +30,7 @@ export const offers: iOffer[] = [
     price: 4.99,
     sold: 31,
     quantity: 0,
+    sliderPhoto: ["/makita2.jpg", "/makita1.jpg", "/makita3.jpg"],
   },
 ];
 

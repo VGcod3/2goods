@@ -31,10 +31,11 @@ export const Hero = () => {
               Win prizes
             </h1>
             <p className="r1-text text-white  text-center lg:text-left">
-              Lorem ipsum dolor sit amet consectetur. Vulputate interdum sed
-              gravida nunc pharetra tempor. Elementum auctor aliquam ullamcorper
-              fames tristique cursus rhoncus enim accumsan. Leo ut euismod velit
-              elit amet. Tortor integer porta senectus massa.
+              Win prizes with our lottery! Everyone can try their luck and win
+              amazing gifts. Participants have great chances of winning, as the
+              number of tickets in each draw is limited. We ensure transparency
+              by showing the number of entries for each draw. The winner is
+              guaranteed even if all tickets are not sold. Join now and win!
             </p>
 
             <Button
@@ -42,9 +43,7 @@ export const Hero = () => {
               // asChild
               onClick={() => scrollTo("#prizes")}
             >
-              {/* <Link href={"#prizes"}> */}
               Take your chance
-              {/* </Link> */}
             </Button>
           </div>
           <div className="hidden lg:block col-span-6 h-96">

@@ -5,7 +5,7 @@ export const CONSTANTS = {
   min: 1,
   max: 1000,
   step: 1,
-  defaultValue: 350,
+  defaultValue: 1,
 };
 
 const cartSlice = createSlice({

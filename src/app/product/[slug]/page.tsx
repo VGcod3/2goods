@@ -16,16 +16,16 @@ const rules = [
 ];
 
 export default function Good({ params }: { params: { slug: string } }) {
-  const product = useDataFromSlug(params.slug);
-
   return (
     <div className="w-full h-full">
-      <GoodSection product={product} />
+      <GoodSection slug={params.slug} />
     </div>
   );
 }
 
-const GoodSection = ({ product }: { product: iOffer }) => {
+const GoodSection = ({ slug }: { slug: string }) => {
+  const product = useDataFromSlug(slug);
+
   const { title, price, sold, name, image } = product;
 
   return (
@@ -47,7 +47,7 @@ const GoodSection = ({ product }: { product: iOffer }) => {
         />
         <div className="lg:grid grid-cols-12 gap-4 w-full container mt-40 hidden">
           <div className="col-span-6 flex flex-col gap-4">
-            <PhotoSlider />
+            <PhotoSlider slug={slug} />
 
             <div className="bg-white shadow-[0_0_40px_0_rgb(1,1,1,0.3)] rounded-[30px] h-96 w-full max-w-md mt-12">
               <ul className="flex flex-col gap-2 p-8 justify-between h-full list-disc ml-6">

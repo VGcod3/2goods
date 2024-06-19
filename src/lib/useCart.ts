@@ -1,7 +1,6 @@
 import {
   addStoreTickets,
   addToStore,
-  clearStoreCart,
   removeFromStore,
   subStoreTickets,
 } from "@/store/CartSlice";
@@ -17,7 +16,7 @@ export const useCartItem = (product: iOffer) => {
     (item) => item.name === name
   ) as iOffer;
 
-  const itemQuantity = item ? item.quantity : 350;
+  const itemQuantity = item ? item.quantity : 1;
 
   const itemSum = +(itemQuantity * price).toFixed(2);
 
