@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Footer } from "../components/Footer";
 import { Providers } from "@/store/Providers";
 import { MarqueBottom } from "@/components/MarqueeBottom";
+import { Analytics } from "@vercel/analytics/react";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
+      <Analytics />
       <html lang="en">
         <body className={cn(archivo.className, "flex flex-col bg-white")}>
           <div className="mb-16">
