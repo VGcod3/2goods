@@ -6,6 +6,7 @@ import { ScreenWrapper, BlurredWrapper } from "@/components/Wrappers";
 import { useDataFromSlug, iOffer } from "@/app/products-data";
 import { PhotoSlider } from "@/components/PhotoSlider";
 import Image from "next/image";
+import dayjs from "dayjs";
 
 const rules = [
   "  Entries only £2.50",
@@ -79,7 +80,10 @@ const GoodSection = ({ slug }: { slug: string }) => {
             <TicketNumberPicker product={product} />
 
             <div className="flex flex-col mt-20 gap-4 max-w-md w-full mx-auto">
-              <h2 className="h2-text">Automated draw 10.06.2024 at 10:00 AM</h2>
+              <h2 className="h2-text">
+                Automated draw {dayjs().add(1, "month").format("DD.MM.YYYY")} at
+                10:00 AM
+              </h2>
               <p className="r1-text">
                 Competition will close sooner if the maximum entries are
                 received
@@ -91,13 +95,13 @@ const GoodSection = ({ slug }: { slug: string }) => {
 
         <div className="flex lg:hidden flex-col gap-4 w-full h-max max-w-2xl mx-auto mt-16">
           <h2 className="h1-text text-white">{title}</h2>
-          <div className="bg-white rounded-[54px] w-full flex flex-col">
-            <img src={image} alt={name} />
 
-            <p className="h2-text text-center m-6">
-              Automated draw tomorrow at 10am
-            </p>
-          </div>
+          <img
+            src={image}
+            alt={name}
+            className="rounded-[54px] w-full flex flex-col"
+          />
+
           <p className="text-white text-5xl">$ {price}</p>
           <div className="relative bottom-6 flex flex-col gap-0.5">
             <p className="r1-text text-right text-white">Sold {sold}%</p>
@@ -113,7 +117,8 @@ const GoodSection = ({ slug }: { slug: string }) => {
           </div>
           <TicketNumberPicker product={product} />
           <p className="h2-text text-land-gray p-10 text-center">
-            Automated draw 10.06.2024 at 10:00 AM
+            Automated draw {dayjs().add(1, "month").format("DD.MM.YYYY")} at
+            10:00 AM
           </p>
           <h2 className="h1-text text-land-gray text-center">
             About this prize

@@ -4,19 +4,23 @@ import { useCallback, useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 export const MarqueBottom = () => {
-  const tomorrowDate = dayjs().add(1, "day").format(" MMMM DD, YYYY");
+  const tomorrowDate = dayjs().add(1, "month").format(" MMMM DD, YYYY");
 
   const calculateTimeUntilTomorrow = () => {
-    return dayjs().endOf("day").diff(dayjs(), "second");
+    return dayjs()
+      .add(1, "month")
+      .startOf("day")
+      .add(10, "hours")
+      .diff(dayjs(), "second");
   };
 
   const timeFormat = (time: number) => {
-    const hours = Math.floor(time / 3600);
-    const minutes = Math.floor((time % 3600) / 60);
-    const seconds = time % 60;
-    return `${hours.toString().padStart(2, "0")}:${minutes
-      .toString()
-      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+    const days = Math.floor(time / (60 * 60 * 24));
+    const hours = Math.floor((time % (60 * 60 * 24)) / (60 * 60));
+    const minutes = Math.floor((time % (60 * 60)) / 60);
+    const seconds = Math.floor(time % 60);
+
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
   };
 
   const [time, setTime] = useState(calculateTimeUntilTomorrow());
