@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { offers, iOffer } from "@/app/products-data";
 import { ScreenWrapper } from "./Wrappers";
+import image from "next/image";
+import { title } from "process";
 
 export const Offers = () => {
   return (

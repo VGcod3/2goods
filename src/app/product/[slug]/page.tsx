@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 import { TicketNumberPicker } from "@/app/TicketNumberPicker";
 import { ScreenWrapper, BlurredWrapper } from "@/components/Wrappers";
-import { useDataFromSlug, iOffer } from "@/app/products-data";
+import { useDataFromSlug } from "@/app/products-data";
 import { PhotoSlider } from "@/components/PhotoSlider";
 import Image from "next/image";
 import dayjs from "dayjs";
