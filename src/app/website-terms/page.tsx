@@ -15,7 +15,7 @@ const terms: iPaying[] = [
   {
     header: "Intellectual Property",
     description:
-      "All content, trademarks, and logos on this website are the property of [Your Lottery Website] and are protected by copyright and other intellectual property laws. You may not reproduce, distribute, or display any part of our website without our express written permission. You may download or print individual pages for personal, non-commercial use only.",
+      "All content, trademarks, and logos on this website are the property of Sweeps and are protected by copyright and other intellectual property laws. You may not reproduce, distribute, or display any part of our website without our express written permission. You may download or print individual pages for personal, non-commercial use only.",
   },
   {
     header: "User Conduct",

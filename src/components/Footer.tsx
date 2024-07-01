@@ -60,25 +60,6 @@ export const Footer = () => {
           >
             hello@sweeps.com
           </a>
-          <div className="flex gap-2">
-            <GradientBtn>
-              <a href="#" className="p-[1px]">
-                <FaInstagram size={48} />
-              </a>
-            </GradientBtn>
-
-            <GradientBtn>
-              <a href="#" className="p-[1px]">
-                <FaFacebookF size={48} />
-              </a>
-            </GradientBtn>
-
-            <GradientBtn>
-              <a href="#" className="p-[1px]">
-                <AiOutlineYoutube size={48} />
-              </a>
-            </GradientBtn>
-          </div>
         </div>
       </div>
       <p className="text-center mt-6 text-lg lg:text-2xl leading-normal font-light">

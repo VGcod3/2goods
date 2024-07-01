@@ -10,7 +10,7 @@ const terms: iTerm[] = [
   {
     header: "Eligibility",
     description:
-      "Participation in our lottery is open to individuals who are of legal age according to the laws of their jurisdiction. By purchasing a ticket, you confirm that you meet the age requirement. Employees of [Your Lottery Website], their family members, and anyone else connected with the operation of the lottery are not eligible to participate.",
+      "Participation in our lottery is open to individuals who are of legal age according to the laws of their jurisdiction. By purchasing a ticket, you confirm that you meet the age requirement. Employees of Sweeps, their family members, and anyone else connected with the operation of the lottery are not eligible to participate.",
   },
   {
     header: "Ticket Purchase",
@@ -30,7 +30,7 @@ const terms: iTerm[] = [
   {
     header: "Liability",
     description:
-      "We are not responsible for any loss or damage incurred as a result of participating in our lottery or using our website. This includes, but is not limited to, loss of data, loss of profits, or any other financial or personal loss. By participating in the lottery, you agree to release and hold harmless [Your Lottery Website] and its affiliates from any and all claims, damages, and liabilities.",
+      "We are not responsible for any loss or damage incurred as a result of participating in our lottery or using our website. This includes, but is not limited to, loss of data, loss of profits, or any other financial or personal loss. By participating in the lottery, you agree to release and hold harmless Sweeps and its affiliates from any and all claims, damages, and liabilities.",
   },
   {
     header: "Amendments",
