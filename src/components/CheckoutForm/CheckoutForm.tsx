@@ -85,21 +85,21 @@ type FormSchema = z.infer<typeof formSchema>;
 export const CheckoutForm = () => {
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      email: "johndoe@gmail.com",
-      fullName: "John Doe",
-      cardNumber: "5123450000000008",
-      expiry: "01/39",
-      cvc: "100",
-      address: "123 Main St",
-      city: "New York",
-      country: "US",
-      zip: "10001",
-      phone: "1234567890",
-    },
+    // defaultValues: {
+    //   email: "johndoe@gmail.com",
+    //   fullName: "John Doe",
+    //   cardNumber: "5123450000000008",
+    //   expiry: "01/39",
+    //   cvc: "100",
+    //   address: "123 Main St",
+    //   city: "New York",
+    //   country: "US",
+    //   zip: "10001",
+    //   phone: "1234567890",
+    // },
   });
 
-  const { sendPayment } = useSwapPayment();
+  const { sendPayment, message } = useSwapPayment();
 
   // 2. Define a submit handler.
   function onSubmit(values: FormSchema) {
@@ -126,7 +126,7 @@ export const CheckoutForm = () => {
     });
   }
 
-  const { items, totalSum, discontedMoney, finalSum, taxes } = useCart();
+  const { items, totalSum, finalSum, taxes } = useCart();
 
   return (
     <Form {...form}>
@@ -188,6 +188,12 @@ export const CheckoutForm = () => {
             >
               Pay $ {finalSum}
             </Button>
+
+            {message && (
+              <p className="r2-text flex justify-center mt-5 text-center text-red-500">
+                {message}
+              </p>
+            )}
 
             <p className="r2-text flex lg:hidden justify-center mt-5 text-center">
               Payment details stored in plain text

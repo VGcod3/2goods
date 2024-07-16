@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import axios from "axios";
 import { z } from "zod";
 import { getUserIP } from "./getUserIp";
@@ -109,7 +108,7 @@ export const useSwapPayment = () => {
       window.location.href = threedUrl; // Переадресація користувача для 3DS верифікації
     } catch (error) {
       console.error("Payment Error:", error);
-      setMessage("Payment failed. Please try again.");
+      setMessage("Payment failed. Enter valid data and please try again.");
     }
   };
 
