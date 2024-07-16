@@ -36,7 +36,7 @@ export default function RootLayout({
             <Footer />
           </div>
 
-          <div className="fixed w-full bottom-0">
+          <div className="fixed w-full bottom-0 z-10">
             <MarqueBottom />
           </div>
         </body>

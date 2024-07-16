@@ -1,5 +1,5 @@
-import { Input } from "./ui/input";
-import { FormField, FormItem, FormControl, FormMessage } from "./ui/form";
+import { Input } from "../ui/input";
+import { FormField, FormItem, FormControl, FormMessage } from "../ui/form";
 
 export const FormFieldItem = ({
   props,
@@ -20,12 +20,12 @@ export const FormFieldItem = ({
                 boxShadow: "inset 0 0px 18px 0 rgb(0 0 0 / 0.17)",
                 color: "black",
               }}
-              className="w-full h-16 rounded-full p-6 text-xl placeholder:text-black"
+              className="w-full h-16 rounded-full p-6 text-xl "
               placeholder={props.label}
               {...field}
             />
           </FormControl>
-          <FormMessage />
+          <FormMessage className="text-center" />
         </FormItem>
       )}
     />
@@ -35,6 +35,6 @@ export const FormFieldItem = ({
 export interface iFormField {
   name: string;
   label: string;
-  type: "email" | "text" | "number";
+  type: "email" | "text" | "number" | "phone";
   className: string;
 }
